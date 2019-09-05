@@ -1,4 +1,24 @@
 @charset "utf-8";
+日野さんからのチェック
+
+/* innerの方でコンテンツごとをpaddingとる。
+themeのところ一つ下の回想でpaddingをとる。 */
+
+/* whiat we can doのフォントウェイトを確認する。
+今、エラーが出ている。 */
+
+/* productのくらすと　bg合わせていいと思う。 */
+
+/* productの見出しの要素をmarginにする。
+要素と要素の間のため */
+
+/* emailボタンも0,3秒開ける。 */
+
+/* our skillsの下もmarginでとる。 */
+
+/* snsとbgも一緒にしていい。 */
+
+/* sns-boxのalign-itemsを確認する。 */
 
 body {
   font-family: Lato;
@@ -10,9 +30,15 @@ body {
   width: 1100px;
 }
 
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
 .bg {
   background-color:  #f2f2f2;
-}
+}　　
 
 /* header */
 .header {
@@ -21,12 +47,11 @@ body {
   position: fixed;
   top: 0;
   z-index: 9999;
-  padding: 15px 0;
 }
 
-/* .header-contents {
+.header-contents {
   padding: 15px;
-} */
+}
 
 .header-left {
   float: left;
@@ -34,12 +59,11 @@ body {
 
 .header-right {
   float: right;
-  vertical-align: middle;
 }
 
 .header-contact-btn {
   color: #fff;
-  display: inline-block;
+  display: block;
   text-decoration: none;
   background-color: #74cfae;
   font-size: 12px;
@@ -58,12 +82,7 @@ body {
 }
 
 /* theme */
-
-.main {
-  padding-top: 63px;
-}
-
-.theme {
+.theme-inner {
   padding: 250px 0;
 }
 
@@ -130,11 +149,11 @@ body {
   font-size: 24px;
   color:  #c0c0c0;
   font-family: Raleway;
+  margin-bottom: 40px;
 }
 
 .product-box {
   font-size: 0;
-  padding-top: 40px;
 }
 
 .product-img {
@@ -142,6 +161,7 @@ body {
   transition: 0.3s;
   margin-left: 100px;
   display: inline-block;
+  margin-bottom: 80px;
 }
 
 .product-img:nth-child(3n+1) {
@@ -153,7 +173,7 @@ body {
 }
 
 .product-img:nth-last-child(-n+3) {
-  margin-top: 80px;
+  margin-bottom: 0;
 }
 
 .product-desc {
@@ -176,6 +196,7 @@ body {
   display: inline-block;
   color: #fff;
   vertical-align: middle;
+  transition: 0.3s;
 }
 
 .product-email-btn:hover {
@@ -194,7 +215,7 @@ body {
 
 .able-title {
   font-size: 24px;
-  padding-bottom: 70px;
+  margin-bottom: 70px;
   color: #fff;
   font-family: Raleway;
 }
@@ -221,12 +242,10 @@ body {
 /* nav */
 .sns-inner {
   padding: 200px 0;
-  text-align: center;
 }
 
 .sns-box {
   display: flex;
-  align-items: middle;
   justify-content: center;
 }
 
@@ -247,6 +266,9 @@ body {
 /* footer */
 .footer {
   background-color: #74cfae;
+}
+
+.footer-inner {
   padding: 20px 0 25px 0;
 }
 
@@ -261,7 +283,7 @@ body {
 
 
 /* TAB */
-@media(max-width:1199px) {
+@media screen and (max-width:1199px) {
  /* container */
   .container {
     width: 97%;
@@ -289,24 +311,24 @@ body {
   .product-img {
     opacity: 0.7;
     transition: 0.3s;
-    margin: 0 auto;
     display: block;
+    margin: 0 auto;
   }
 
   .product-img:hover {
     opacity: 1.0;
   }
   
-  .product-img:nth-child(4n) {
-    margin-top: 80px;
+  .product-img:nth-child(3n) {
+    margin-bottom: 80px;
   }
 
-  .product-img:nth-last-child(-n+2) {
-    margin-top: 0;
+  .product-img:nth-last-child(3n+1.3n+2) {
+    margin-bottom: 0;
   }
   
   .product-desc {
-    text-align: center
+    text-align: center;
     margin-top: 90px;
   }
   
@@ -346,7 +368,7 @@ body {
 
 
 /* SP */
-@media(max-width:767px) {
+@media screen and (max-width:767px) {
   /* menu */
   .header-contact-btn {
     display: none;
@@ -355,6 +377,7 @@ body {
   .menu {
   vertical-align: middle;
   display: inline-block;
+  padding-right: 10px;
   }
   
   .menu-btn {
