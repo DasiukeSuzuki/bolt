@@ -18,10 +18,19 @@ themeのところ一つ下の回想でpaddingをとる。 */
 
 /* snsとbgも一緒にしていい。 */
 
+trailling-spacesをインストールする。パッケージ
 /* sns-boxのalign-itemsを確認する。 */
+/*
+snsのところ、クリックできる領域をaタグにつける。liになっている。
+aタグを広げる
+
+スマホ画像の部分をinlineなので、vertical-align-topにする。 */
 
 body {
   font-family: Lato;
+}
+img {
+  vertical-align: bottom;
 }
 
 .container {
@@ -29,7 +38,6 @@ body {
   text-align: center;
   width: 1100px;
 }
-
 .clearfix:after {
   content: "";
   clear: both;
@@ -38,7 +46,11 @@ body {
 
 .bg {
   background-color:  #f2f2f2;
-}　　
+}
+
+main {
+  padding-top: 78px;
+}
 
 /* header */
 .header {
@@ -135,7 +147,6 @@ body {
 .introduction-desc {
   font-size: 20px;
   color: #fff;
-  font-weight: solid;
 }
 
 /* article */
@@ -249,10 +260,11 @@ body {
   justify-content: center;
 }
 
-.sns-icon {
+.sns-link {
+  display: block;
   width: 185px;
-  padding: 20px 0;
   transition: 0.3s;
+  padding: 20px 0;
 }
 
 .sns-icon:hover {
@@ -318,7 +330,7 @@ body {
   .product-img:hover {
     opacity: 1.0;
   }
-  
+
   .product-img:nth-child(3n) {
     margin-bottom: 80px;
   }
@@ -326,18 +338,18 @@ body {
   .product-img:nth-last-child(3n+1.3n+2) {
     margin-bottom: 0;
   }
-  
+
   .product-desc {
     text-align: center;
     margin-top: 90px;
   }
-  
+
   .product-desc-text {
     width: 500px;
     display: block;
     margin: 0 auto;
   }
-  
+
   .product-email-btn {
     display: block;
     color: #fff;
@@ -359,7 +371,7 @@ body {
   .circle:first-child {
     margin-top: 0;
   }
-  
+
   .circle > p {
     font-size: 16px;
     color: #fff;
@@ -372,14 +384,14 @@ body {
   /* menu */
   .header-contact-btn {
     display: none;
-  } 
+  }
 
   .menu {
   vertical-align: middle;
   display: inline-block;
   padding-right: 10px;
   }
-  
+
   .menu-btn {
   border: 1px solid #ddd;
   padding: 10px;
@@ -429,7 +441,7 @@ body {
     display: block;
     padding:  0 15px;
   }
-  
+
   .sns-icon {
     width: 100%;
   }
@@ -437,7 +449,5 @@ body {
   .sns-link {
     cursor: pointer;
   }
-  
-
 }
-
+}
