@@ -19,11 +19,15 @@ themeのところ一つ下の回想でpaddingをとる。 */
 aタグを広げる
 スマホ画像の部分をinlineなので、vertical-align-topにする。 */
 /* 修正完了したらプッシュして、レスポンシブにする。 */
+
+/* レスポンシブ導入 */
+sns-box
 body {
   font-family: Lato;
 }
 img {
   vertical-align: bottom;
+  max-width: 100%;
 }
 .container {
   margin: 0 auto;
@@ -223,12 +227,12 @@ img {
   justify-content: center;
 }
 
-.circle:first-child {
-  margin-left: 0;
-}
-
 .circle {
   margin-left: 180px;
+}
+
+.circle:first-child {
+  margin-left: 0;
 }
 
 .circle > p {
@@ -245,7 +249,6 @@ img {
 .sns-box {
   display: flex;
   justify-content: center;
-  padding: 50px 15px;
 }
 
 .sns-link {
@@ -253,7 +256,6 @@ img {
   width: 185px;
   transition: 0.3s;
   padding: 20px 0;
-  margin: 0 auto;
 }
 
 .sns-link:hover {
@@ -280,8 +282,7 @@ img {
 }
 
 
-/* responsive */
-
+/* responsive----------------------------------------------------------------------------- */
 /* TABver */
 @media screen and (max-width:1199px) {
  /* container */
@@ -304,27 +305,22 @@ img {
   }
 
   .introduction-title {
-  margin-top: 20px;
+    margin-top: 20px;
   }
 
   /* product */
   .product-img {
-    opacity: 0.7;
-    transition: 0.3s;
     display: block;
     margin: 0 auto;
-  }
-
-  .product-img:hover {
-    opacity: 1.0;
+    width: 300px;
   }
 
   .product-img:nth-child(3n) {
     margin-bottom: 80px;
   }
 
-  .product-img:nth-last-child(3n+1.3n+2) {
-    margin-bottom: 0;
+  .product-img:nth-child(3n+1) {
+    margin: 0 auto;
   }
 
   .product-desc {
@@ -333,14 +329,12 @@ img {
   }
 
   .product-desc-text {
-    width: 500px;
     display: block;
     margin: 0 auto;
   }
 
   .product-email-btn {
     display: block;
-    color: #fff;
     margin: 40px auto 0 auto;
     width: 70px;
   }
@@ -360,14 +354,8 @@ img {
     margin-top: 0;
   }
 
-  .circle > p {
-    font-size: 16px;
-    color: #fff;
-    margin-top: 15px;
-  }
+/* Smart Phonever---------------------------------------------------------------------- */
 
-
-/* Smart Phonever */
 @media screen and (max-width:767px) {
   /* menu */
   .header-contact-btn {
@@ -375,7 +363,6 @@ img {
   }
 
   .menu {
-  vertical-align: middle;
   display: inline-block;
   padding-right: 10px;
   }
