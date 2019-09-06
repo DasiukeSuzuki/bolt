@@ -55,10 +55,11 @@ img {
   position: fixed;
   top: 0;
   z-index: 9999;
+  box-sizing: border-box;
 }
 
 .header-contents {
-  padding: 15px;
+  padding: 15px 0;
 }
 
 .header-left {
@@ -138,6 +139,7 @@ img {
 .introduction-desc {
   font-size: 20px;
   color: #fff;
+  width: 100%;
 }
 
 /* article */
@@ -285,9 +287,20 @@ img {
 /* responsive----------------------------------------------------------------------------- */
 /* TABver */
 @media screen and (max-width:1199px) {
+  /* レビュー小松さん
+   わっとウィーキャンドーh2につける。
+   要素と要素の間のため。
+   widht:100%になる.introduction-title。
+   li に25%を指定。aタグはその幅の100%にする。
+   */
+
  /* container */
   .container {
     width: 97%;
+  }
+
+  .main {
+    padding-top: 78px;
   }
 
   /* introduction */
@@ -296,16 +309,22 @@ img {
     padding-bottom: 25px;
   }
 
-  .introduction-left , .introduction-right {
+  .introduction-right {
+    margin: 20px auto 0 auto;
+    width:100%;
+  }
+
+  .introduction-left {
     margin: 0 auto;
+  }
+
+
+  .introduction-title {
+    width: 100%;
   }
 
   .icon-black  {
     color: #4e4e4e;
-  }
-
-  .introduction-title {
-    margin-top: 20px;
   }
 
   /* product */
@@ -326,11 +345,13 @@ img {
   .product-desc {
     text-align: center;
     margin-top: 90px;
+    width:100%;
   }
 
   .product-desc-text {
     display: block;
     margin: 0 auto;
+    width:100%;
   }
 
   .product-email-btn {
@@ -354,17 +375,32 @@ img {
     margin-top: 0;
   }
 
+  .sns-icon {
+    width: 25%;
+  }
+
+  .sns-link {
+    width: 100%;
+  }
+
 /* Smart Phonever---------------------------------------------------------------------- */
 
 @media screen and (max-width:767px) {
+
+  /* ヘッダーをbox-sizingを指定する。幅が超えているため。そもそも左右のpaddingいらない。
+   headerとのさを84pxにする。コンテンツの中width100%にする。*/
   /* menu */
+
   .header-contact-btn {
     display: none;
   }
 
+  .main {
+    padding-top: 84px;
+  }
+
   .menu {
   display: inline-block;
-  padding-right: 10px;
   }
 
   .menu-btn {
@@ -387,25 +423,13 @@ img {
     display: block;
     padding-bottom: 25px;
   }
-  .introduction-left , .introduction-right {
-    margin: 0 auto;
-  }
-
-  .introduction-right {
-    width: 100%;
-  }
-  .introduction-title {
-    margin-top: 20px;
-  }
 
   .introduction-desc {
+    text-align: center;
     width: 100%;
   }
-
   /* product */
-  .product-desc-text {
-    width: 100%;
-  }
+
 
   /* sns */
   .sns-inner {
@@ -417,8 +441,16 @@ img {
     padding:  0 15px;
   }
 
+  .sns-icon {
+    margin: 0 auto;
+  }
+
   .sns-link {
     cursor: pointer;
+    width: 100%;
+  }
+
+  .sns-icon {
     width: 100%;
   }
 }
