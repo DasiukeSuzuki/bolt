@@ -1,31 +1,24 @@
 @charset "utf-8";
-日野さんからのチェック
-
+/* 日野さんからのレビュー */
 /* innerの方でコンテンツごとをpaddingとる。
 themeのところ一つ下の回想でpaddingをとる。 */
-
 /* whiat we can doのフォントウェイトを確認する。
 今、エラーが出ている。 */
-
 /* productのくらすと　bg合わせていいと思う。 */
-
 /* productの見出しの要素をmarginにする。
 要素と要素の間のため */
-
 /* emailボタンも0,3秒開ける。 */
-
 /* our skillsの下もmarginでとる。 */
-
 /* snsとbgも一緒にしていい。 */
 
-trailling-spacesをインストールする。パッケージ
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+/* 吉成さんからのレビュー */
+/* trailling-spacesをインストールする。パッケージ */
 /* sns-boxのalign-itemsを確認する。 */
-/*
-snsのところ、クリックできる領域をaタグにつける。liになっている。
+/* snsのところ、クリックできる領域をaタグにつける。liになっている。
 aタグを広げる
-
 スマホ画像の部分をinlineなので、vertical-align-topにする。 */
-
+/* 修正完了したらプッシュして、レスポンシブにする。 */
 body {
   font-family: Lato;
 }
@@ -48,7 +41,7 @@ img {
   background-color:  #f2f2f2;
 }
 
-main {
+.main {
   padding-top: 78px;
 }
 
@@ -115,7 +108,6 @@ main {
 
 .introduction {
   background-color: #74cfae;
-  /* width: 100%; */
 }
 
 .introduction-inner {
@@ -124,10 +116,6 @@ main {
   padding-top: 50px;
   align-items: center;
 }
-
-/* .introduction-img {
-  padding: 50px 50px 0 100px;
-} */
 
 .introduction-right {
   width: 600px;
@@ -258,6 +246,7 @@ main {
 .sns-box {
   display: flex;
   justify-content: center;
+  padding: 50px 15px;
 }
 
 .sns-link {
@@ -265,9 +254,10 @@ main {
   width: 185px;
   transition: 0.3s;
   padding: 20px 0;
+  margin: 0 auto;
 }
 
-.sns-icon:hover {
+.sns-link:hover {
   background-color: #fff;
 }
 
@@ -293,8 +283,7 @@ main {
 
 /* responsive */
 
-
-/* TAB */
+/* TABver */
 @media screen and (max-width:1199px) {
  /* container */
   .container {
@@ -379,7 +368,7 @@ main {
   }
 
 
-/* SP */
+/* Smart Phonever */
 @media screen and (max-width:767px) {
   /* menu */
   .header-contact-btn {
@@ -398,7 +387,7 @@ main {
   }
 
   /* theme */
-  .theme {
+  .theme-inner {
     padding: 160px 0 130px 0;
   }
   .theme-title {
@@ -442,12 +431,9 @@ main {
     padding:  0 15px;
   }
 
-  .sns-icon {
-    width: 100%;
-  }
-
   .sns-link {
     cursor: pointer;
+    width: 100%;
   }
 }
 }
